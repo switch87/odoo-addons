@@ -1,0 +1,27 @@
+# Copyright 2014 Therp BV (<http://therp.nl>)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+{
+    "name": "Preview attachments",
+    "version": "12.0.1.0.2",
+    "author": "Therp BV,"
+              "Onestein,"
+              "Odoo Community Association (OCA)",
+    "license": "AGPL-3",
+    "summary": 'Preview attachments supported by Viewer.js',
+    "category": "Knowledge Management",
+    "depends": [
+        'web',
+        'mail'
+    ],
+    "qweb": [
+        'static/src/xml/attachment_preview.xml',
+    ],
+    "assets": {
+        'web.assets_backend': [
+            "attachment_preview/static/src/js/attachment_preview.js",
+            "attachment_preview/static/src/scss/attachment_preview.scss",
+        ],
+    },
+    "installable": True,
+}

@@ -1,0 +1,12 @@
+[submodule "product-variant"]
+	path = product-variant
+	url = git@github.com:OCA/product-variant
+	branch = 15.0
+[submodule "brand"]
+	path = brand
+	url = git@github.com:OCA/brand
+	branch = 15.0
+[submodule "knowledge"]
+	path = knowledge
+	url = git@github.com:oca/knowledge
+	branch = 12.0
