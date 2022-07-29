@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="layout" name="Main layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//head" position="inside">
+            <!-- Google Tag Manager -->
+            <script id="gtm_script" t-if="website and website.google_tag_manager_id and not editable">
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','<t t-esc="website.google_tag_manager_id"/>');
+            </script>
+            <!-- End Google Tag Manager -->
+
+        </xpath>
+        <xpath expr="//div[@id='wrapwrap']" position="after">
+            <noscript id="gtm_noscript" t-if="website and website.google_tag_manager_id and not editable">
+                <!-- Google Tag Manager (noscript) -->
+                <iframe t-att-src="'https://www.googletagmanager.com/ns.html?id='+website.google_tag_manager_id"
+                        height="0" width="0" style="display:none;visibility:hidden">
+                </iframe>
+                <!-- End Google Tag Manager (noscript) -->
+            </noscript>
+        </xpath>
+    </template>
+</odoo>
